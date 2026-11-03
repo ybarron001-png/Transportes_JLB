@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Transportes JLB: prototipo escolar de administración de viajes.">
+  <title>Panel principal | Transportes JLB</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body data-page="index.html">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand-icon" aria-hidden="true">🚛</span>
+        <span><strong>TRANSPORTES <span>JLB</span></strong><small>Control de viajes</small></span>
+      </a>
+      <p class="sidebar-title">MENÚ PRINCIPAL</p>
+      <nav class="navigation" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link-jlb active" aria-current="page"><span aria-hidden="true">🏠</span><span>Inicio</span></a>
+<a href="viajes.html" class="nav-link-jlb " ><span aria-hidden="true">🚚</span><span>Registro de viajes</span></a>
+<a href="calendario.html" class="nav-link-jlb " ><span aria-hidden="true">📅</span><span>Calendario semanal</span></a>
+<a href="reportes.html" class="nav-link-jlb " ><span aria-hidden="true">📊</span><span>Gastos y reportes</span></a>
+<a href="facturas.html" class="nav-link-jlb " ><span aria-hidden="true">🧾</span><span>Facturas y evidencias</span></a>
+      </nav>
+      <div class="sidebar-note">🚚 Un viaje = una entrega<br><small>Prototipo escolar · Guardado local</small></div>
+    </aside>
+    <main class="main-content">
+      <header class="page-header d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+        <div>
+          <div class="eyebrow">PANEL ADMINISTRATIVO / TRANSPORTES JLB</div>
+          <h1>Panel principal</h1>
+          <p class="text-secondary mb-0">Resumen general de la operación y las próximas entregas.</p>
+        </div>
+        <div class="header-pill"><span aria-hidden="true">🔒</span> Vista de administrador</div>
+      </header>
+      
+<section class="hero-panel mb-4">
+  <div class="row align-items-center g-3">
+    <div class="col-md-9">
+      <span class="hero-kicker">OPERACIÓN Y LOGÍSTICA</span>
+      <h2>Todos tus viajes, en un solo lugar.</h2>
+      <p>Organiza entregas, controla gastos y revisa el estado de tus facturas de manera sencilla.</p>
+      <div class="d-flex flex-wrap gap-2">
+        <a class="btn btn-light fw-semibold" href="viajes.html">+ Registrar viaje</a>
+        <a class="btn btn-outline-light" href="calendario.html">Ver calendario</a>
+      </div>
+    </div>
+    <div class="col-md-3 text-center"><div class="hero-truck" aria-hidden="true">🚛</div></div>
+  </div>
+</section>
+<section class="row g-3 mb-4" aria-label="Indicadores de viajes">
+  <div class="col-sm-6 col-xl-3"><div class="stat-card"><span class="stat-icon">📦</span><span class="stat-label">Viajes registrados</span><strong id="kpiTotal">0</strong><small>Total general</small></div></div>
+  <div class="col-sm-6 col-xl-3"><div class="stat-card"><span class="stat-icon">📅</span><span class="stat-label">Programados</span><strong id="kpiProgramados">0</strong><small>Entregas pendientes</small></div></div>
+  <div class="col-sm-6 col-xl-3"><div class="stat-card"><span class="stat-icon">🚚</span><span class="stat-label">En curso</span><strong id="kpiCurso">0</strong><small>Viajes en camino</small></div></div>
+  <div class="col-sm-6 col-xl-3"><div class="stat-card"><span class="stat-icon">💰</span><span class="stat-label">Flete por cobrar</span><strong id="kpiCobrar" class="money-stat">$0</strong><small>Facturas no pagadas</small></div></div>
+</section>
+<section class="content-card">
+  <div class="section-head"><div><h2>Próximas citas</h2><p>Consulta las entregas más cercanas.</p></div><a href="viajes.html" class="btn btn-sm btn-outline-danger">Ver todos los viajes</a></div>
+  <div class="table-responsive">
+    <table class="table jlb-table align-middle mb-0"><thead><tr><th>Folio</th><th>Cliente</th><th>Destino</th><th>Fecha de cita</th><th>Estado</th></tr></thead><tbody id="tablaInicio"></tbody></table>
+  </div>
+  <div id="emptyHome" class="empty-state d-none"><div class="empty-emoji">🚚</div><strong>Aún no hay viajes registrados</strong><p>Empieza creando tu primer viaje o carga algunos datos ficticios para probar el prototipo.</p><div class="d-flex justify-content-center flex-wrap gap-2"><a href="viajes.html" class="btn btn-jlb">Registrar mi primer viaje</a><button id="btnDemo" class="btn btn-outline-secondary" type="button">Cargar ejemplos</button></div></div>
+</section>
+      <footer class="footer-note">Transportes JLB · Proyecto escolar de desarrollo web · Todos los montos se muestran en MXN y el flete se registra sin IVA.</footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
