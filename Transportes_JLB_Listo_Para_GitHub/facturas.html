@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Transportes JLB: prototipo escolar de administración de viajes.">
+  <title>Facturas y evidencias | Transportes JLB</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body data-page="facturas.html">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand-icon" aria-hidden="true">🚛</span>
+        <span><strong>TRANSPORTES <span>JLB</span></strong><small>Control de viajes</small></span>
+      </a>
+      <p class="sidebar-title">MENÚ PRINCIPAL</p>
+      <nav class="navigation" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link-jlb " ><span aria-hidden="true">🏠</span><span>Inicio</span></a>
+<a href="viajes.html" class="nav-link-jlb " ><span aria-hidden="true">🚚</span><span>Registro de viajes</span></a>
+<a href="calendario.html" class="nav-link-jlb " ><span aria-hidden="true">📅</span><span>Calendario semanal</span></a>
+<a href="reportes.html" class="nav-link-jlb " ><span aria-hidden="true">📊</span><span>Gastos y reportes</span></a>
+<a href="facturas.html" class="nav-link-jlb active" aria-current="page"><span aria-hidden="true">🧾</span><span>Facturas y evidencias</span></a>
+      </nav>
+      <div class="sidebar-note">🚚 Un viaje = una entrega<br><small>Prototipo escolar · Guardado local</small></div>
+    </aside>
+    <main class="main-content">
+      <header class="page-header d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+        <div>
+          <div class="eyebrow">PANEL ADMINISTRATIVO / TRANSPORTES JLB</div>
+          <h1>Facturas y evidencias</h1>
+          <p class="text-secondary mb-0">Da seguimiento a facturas y fotografías de folios.</p>
+        </div>
+        <div class="header-pill"><span aria-hidden="true">🔒</span> Vista de administrador</div>
+      </header>
+      
+<section class="row g-3 mb-4" aria-label="Resumen de facturación">
+  <div class="col-sm-4"><div class="stat-card"><span class="stat-icon">⏳</span><span class="stat-label">Pendientes</span><strong id="factPendientes">0</strong><small>Por facturar</small></div></div>
+  <div class="col-sm-4"><div class="stat-card"><span class="stat-icon">📄</span><span class="stat-label">Facturadas</span><strong id="factFacturadas">0</strong><small>Aún no pagadas</small></div></div>
+  <div class="col-sm-4"><div class="stat-card"><span class="stat-icon">✅</span><span class="stat-label">Pagadas</span><strong id="factPagadas">0</strong><small>Cobro confirmado</small></div></div>
+</section>
+<section class="content-card">
+  <div class="section-head"><div><h2>Facturas y fotografías de folio</h2><p>Actualiza el estado de pago y adjunta evidencia de cada entrega.</p></div><span class="mini-flag">📸 Evidencias</span></div>
+  <div class="alert alert-warning small mb-3">Prototipo escolar: las fotografías se guardan solo en este navegador. No sustituyen el almacenamiento seguro de una aplicación real.</div>
+  <div id="listaFacturas" class="row g-3"></div>
+  <div id="emptyFacturas" class="empty-state d-none"><div class="empty-emoji">🧾</div><strong>No hay viajes para administrar</strong><p>Agrega un viaje y después podrás actualizar su factura y fotografía.</p><a class="btn btn-jlb" href="viajes.html">Registrar viaje</a></div>
+</section>
+      <footer class="footer-note">Transportes JLB · Proyecto escolar de desarrollo web · Todos los montos se muestran en MXN y el flete se registra sin IVA.</footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
